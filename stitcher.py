@@ -261,7 +261,8 @@ def bundle_files_into_zip(image_path, pdf_path, key_file_path, key_pdf_path):
         # zipf.write(key_rtf_path, os.path.basename(key_rtf_path))
     return zip_path
 
-st.sidebar.title("Image Pixelator")
+# st.logo("logo.png")
+st.sidebar.title("Stitcher")
 uploaded_file = st.sidebar.file_uploader("Upload an image", type=["jpg", "jpeg", "png", "webp"])
 pixelation_option = st.sidebar.checkbox("Pixelate Image", value=True)
 
