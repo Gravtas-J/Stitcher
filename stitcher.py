@@ -14,8 +14,8 @@ import os
 from math import ceil
 import zipfile
 import pandas as pd
-from pyth.plugins.rtf15.reader import Rtf15Reader
-from pyth.plugins.plaintext.writer import PlaintextWriter
+# from pyth.plugins.rtf15.reader import Rtf15Reader
+# from pyth.plugins.plaintext.writer import PlaintextWriter
 import platform
 # Set the limit to a higher value to avoid DecompressionBombError
 Image.MAX_IMAGE_PIXELS = None
