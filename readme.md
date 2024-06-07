@@ -1,6 +1,6 @@
 # Stitcher: Cross Stitch Pattern Generator
 
-![Example](\images\logo.png)
+![](images/logo.png)
 
 ## Overview
 Stitcher is a web application designed to help you create beautiful cross stitch patterns from your images. This application provides several image processing options, including pixelation, color filtering, and cross stitch pattern generation. The final cross stitch pattern can be downloaded as a bundle containing an image, pattern PDF, and color key.
@@ -38,15 +38,15 @@ Stitcher is a web application designed to help you create beautiful cross stitch
 
 ## Example
 
-![Example](\images\base.png)
+![Example](images/base.png)
 
 pixelated:
 
-![Example](\images\pixelated.jpg)
+![Example](images/pixelated.jpg)
 
 Cross stitch pattern:
 
-![Example](\images\cross_stitch_image.png)
+![Example](images/cross_stitch_image.png)
 
 
 ## File Descriptions
