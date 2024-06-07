@@ -18,6 +18,7 @@ import pandas as pd
 # from pyth.plugins.plaintext.writer import PlaintextWriter
 import platform
 # Set the limit to a higher value to avoid DecompressionBombError
+from pathlib import Path
 
 
 Image.MAX_IMAGE_PIXELS = None
@@ -283,7 +284,7 @@ with st.sidebar:
     st.markdown(
         f"""
         <a href="https://buymeacoffee.com/problematicsyntax" target="_blank">
-            <img src="{images/buy_me_a_coffee.png}" alt="Buy Me a Coffee" style="width: 100%;">
+            <img src="https://raw.githubusercontent.com/Gravtas-J/Stitcher/main/images/buy_me_a_coffee.png" style="width: 100%;">
         </a>
         """,
         unsafe_allow_html=True
