@@ -265,6 +265,15 @@ def bundle_files_into_zip(image_path, pdf_path, key_file_path, key_pdf_path):
     return zip_path
 
 # st.logo("logo.png")
+with st.sidebar:
+    st.markdown(
+        f"""
+        <a href="https://buymeacoffee.com/problematicsyntax" target="_blank">
+            <img src="https://raw.githubusercontent.com/Gravtas-J/Stitcher/main/images/buy_me_a_coffee.png" style="width: 100%;">
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
 st.sidebar.title("Stitcher")
 uploaded_file = st.sidebar.file_uploader("Upload an image", type=["jpg", "jpeg", "png", "webp"])
 pixelation_option = st.sidebar.checkbox("Pixelate Image", value=True)
@@ -280,15 +289,7 @@ filter_option = st.sidebar.selectbox("Select Filter", ["None", "Greyscale", "Sep
 #color_option = st.sidebar.selectbox("Select Color Palette", ["Original", "4 Colors", "8 Colors", "16 Colors"])
 process_button = st.sidebar.button("Process Image")
 
-with st.sidebar:
-    st.markdown(
-        f"""
-        <a href="https://buymeacoffee.com/problematicsyntax" target="_blank">
-            <img src="https://raw.githubusercontent.com/Gravtas-J/Stitcher/main/images/buy_me_a_coffee.png" style="width: 100%;">
-        </a>
-        """,
-        unsafe_allow_html=True
-    )
+
 if uploaded_file and process_button:
     image = Image.open(uploaded_file)
     st.image(image, caption='Original Image', use_column_width=True)
