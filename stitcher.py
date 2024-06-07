@@ -18,6 +18,8 @@ import pandas as pd
 # from pyth.plugins.plaintext.writer import PlaintextWriter
 import platform
 # Set the limit to a higher value to avoid DecompressionBombError
+
+
 Image.MAX_IMAGE_PIXELS = None
 
 def pixelate_image(image, size):
@@ -277,6 +279,15 @@ filter_option = st.sidebar.selectbox("Select Filter", ["None", "Greyscale", "Sep
 #color_option = st.sidebar.selectbox("Select Color Palette", ["Original", "4 Colors", "8 Colors", "16 Colors"])
 process_button = st.sidebar.button("Process Image")
 
+with st.sidebar:
+    st.markdown(
+        f"""
+        <a href="https://buymeacoffee.com/problematicsyntax" target="_blank">
+            <img src="{images/buy_me_a_coffee.png}" alt="Buy Me a Coffee" style="width: 100%;">
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
 if uploaded_file and process_button:
     image = Image.open(uploaded_file)
     st.image(image, caption='Original Image', use_column_width=True)
