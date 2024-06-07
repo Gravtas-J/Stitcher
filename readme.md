@@ -38,17 +38,19 @@ Stitcher is a web application designed to help you create beautiful cross stitch
 
 ## Example
 
-![Example](images/base.png)
+![Base](images/base.png)
 
 pixelated:
 
-![Example](images/pixelated.jpg)
+![Pixelated](images/pixelated.jpg)
 
 Cross stitch pattern:
 
-![Example](images/cross_stitch_image.png)
+![Pattern](images/cross_stitch_image.png)
 
+Cross stitch key:
 
+![Colour_key](images/colour_key_image.png)
 ## File Descriptions
 - **Pixelated Image**: A pixelated version of your uploaded image.
 - **Cross Stitch Pattern Bundle**: A ZIP file containing:
