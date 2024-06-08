@@ -20,7 +20,7 @@ import platform
 # Set the limit to a higher value to avoid DecompressionBombError
 from pathlib import Path
 
-
+st.set_page_config(page_title="Stitcher", page_icon="images\icon.png", layout="centered", initial_sidebar_state="expanded", menu_items=None)
 Image.MAX_IMAGE_PIXELS = None
 
 def pixelate_image(image, size):
@@ -275,6 +275,8 @@ with st.sidebar:
         unsafe_allow_html=True
     )
 st.sidebar.title("Stitcher")
+
+
 uploaded_file = st.sidebar.file_uploader("Upload an image", type=["jpg", "jpeg", "png", "webp"])
 pixelation_option = st.sidebar.checkbox("Pixelate Image", value=True)
 
@@ -289,8 +291,16 @@ filter_option = st.sidebar.selectbox("Select Filter", ["None", "Greyscale", "Sep
 #color_option = st.sidebar.selectbox("Select Color Palette", ["Original", "4 Colors", "8 Colors", "16 Colors"])
 process_button = st.sidebar.button("Process Image")
 
+if 'show_explainer' not in st.session_state:
+    st.session_state['show_explainer'] = True
+explainer = "<div style='text-align: center;'>Quick explainer: Upload an image and adjust the settings to process the image as per your preference. Click 'Process Image' to see the results.</div>"
+# Explainer text
+if st.session_state['show_explainer'] == True:
+    st.markdown(explainer, unsafe_allow_html=True)
+
 
 if uploaded_file and process_button:
+    explainer = ""
     image = Image.open(uploaded_file)
     st.image(image, caption='Original Image', use_column_width=True)
 
